@@ -157,7 +157,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around',
         flex: 1,
-        // height: Dimensions.get('window').width / 2,
     },
     itemShow: {
         margin: 10,

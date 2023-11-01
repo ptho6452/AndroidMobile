@@ -49,12 +49,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   label: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
     color: 'white'
   },
   price: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
     color: 'white'
   },
@@ -64,12 +64,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   labelTotal: {
-    fontSize: 23,
+    fontSize: 24,
     fontWeight: 'bold',
     color: 'white'
   },
   priceTotal: {
-    fontSize: 23,
+    fontSize: 24,
     fontWeight: 'bold',
     color: 'white'
   }

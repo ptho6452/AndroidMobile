@@ -5,7 +5,7 @@ export default function Message() {
   const navigation = useNavigation();
 
   const handleChat = () => (
-    navigation.navigate('ChatMessage')
+    navigation.navigate('Chat')
   );
   return (
     <ImageBackground source={require('../assets/Pattern.png')} style={{ flex: 1 }}>
@@ -16,6 +16,7 @@ export default function Message() {
         <Text style={styles.chat}>Chat</Text>
 
         <View style={styles.container_notification}>
+        <View style={styles.notification}>
           <TouchableOpacity style={styles.notification} onPress={handleChat}>
             <View style={styles.protofile}>
               <Image style={styles.vector} source={require('../assets/Profile_Louis.png')}></Image>
@@ -24,10 +25,14 @@ export default function Message() {
               <Text style={styles.name}>Louis Kelly</Text>
               <Text style={styles.status}>Your Order Just Arrived!</Text>
             </View>
+           
+            
             <Text style={styles.time}>20:00</Text>
-          </TouchableOpacity>
-
+            </TouchableOpacity>
+            </View>
           <View style={styles.notification}>
+          <TouchableOpacity style={styles.notification} onPress={handleChat}>
+
             <View style={styles.protofile}>
               <Image style={styles.vector} source={require('../assets/PaulKoch.png')}></Image>
             </View>
@@ -38,9 +43,13 @@ export default function Message() {
             </View>
             
             <Text style={styles.time}>20:00</Text>
+            </TouchableOpacity>
           </View>
+ 
 
           <View style={styles.notification}>
+          <TouchableOpacity style={styles.notification} onPress={handleChat}>
+
             <View style={styles.protofile}>
               <Image style={styles.vector} source={require('../assets/CarlaKlein.png')}></Image>
             </View>
@@ -49,8 +58,12 @@ export default function Message() {
               <Text style={styles.status}>Your Order Just Arrived!</Text>
             </View>
             <Text style={styles.time}>20:00</Text>
+            </TouchableOpacity>
+
           </View>
+          
         </View>
+    
 
 
       </View>
@@ -71,8 +84,8 @@ const styles = StyleSheet.create({
     opacity: 0.1,
     height: 45,
     maxWidth: 45,
-    justifyContent: "center", // Để căn giữa theo chiều dọc
-    alignItems: "center", // Để căn giữa theo chiều ngang
+    justifyContent: "center",
+    alignItems: "center", 
   },
   vector: {
 

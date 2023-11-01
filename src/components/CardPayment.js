@@ -2,7 +2,7 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View ,Image} from 'react-
 import React from 'react'
 import { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import Visalogo from ".../"
+
 export default function PaymentCard() {
     const navigation = useNavigation();
 
@@ -17,7 +17,12 @@ export default function PaymentCard() {
         },
         {
             id: 2,
-            image: <Image source={require('../assets/payment/visalogo.png')} />,
+            image:"https://tse2.mm.bing.net/th?id=OIP.urGSjQvKKgZ1g-agdnDbvAHaC0&pid=Api&P=0&h=180",
+            stk: "2121 6352 8465 ****",
+        },
+        {
+            id: 3,
+            image:"https://tse1.mm.bing.net/th?id=OIP.TQkOkUCjNbd_NTUKFq-9QAHaCB&pid=Api&P=0&h=180",
             stk: "2121 6352 8465 ****",
         },
        
@@ -49,7 +54,7 @@ export default function PaymentCard() {
 
 const styles = StyleSheet.create({
     Image: {
-        flex: 6 },
+        flex: 9 },
 
     PaymentCardContainer: {
         display: 'flex',

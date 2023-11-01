@@ -28,7 +28,7 @@ import { StyleSheet,
             />
             <TextInput
                 style={styles.input} 
-                placeholder="Mobile phone" 
+                placeholder="phone" 
             />
         </View>
         <View style={styles.bottom}>

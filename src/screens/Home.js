@@ -2,7 +2,7 @@ import { ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-nativ
 import React from 'react';
 import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
-import NearestRestaurant from '../components/NearestRestaurant';
+import NearestRestaurant from '../components/Restaurant';
 
 export default function Home() {
   

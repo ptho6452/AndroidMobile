@@ -43,7 +43,7 @@ export default function LoginForm() {
             },
           ]);
         } else {
-          Alert.alert('Error', 'Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin.');
+          Alert.alert('Error', 'Login failer. Please check infomation.');
         }
     };
 

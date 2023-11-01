@@ -45,7 +45,7 @@ export default function Message() {
                         <TextInput
                             style={styles.textInput}
                             placeholder="Okay I'm waiting  👍"
-                        // Các thuộc tính khác của TextInput
+                      
                         />
                         <Image style={styles.send} source={require('../assets/IconSend.png')}></Image>
                     </View>
@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
         opacity: 0.1,
         height: 45,
         maxWidth: 45,
-        justifyContent: "center", // Để căn giữa theo chiều dọc
-        alignItems: "center", // Để căn giữa theo chiều ngang
+        justifyContent: "center", 
+        alignItems: "center", 
     },
     vector: {
 
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#F6F6F6",
         borderRadius: 22,
         alignItems: "center",
-        paddingVertical: 12, // Khoảng cách dọc ở hai bên
+        paddingVertical: 12,
     },
 
 })

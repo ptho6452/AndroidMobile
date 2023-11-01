@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import DataMenu from '../data/dbMenu';
+import DataMenu from '../database/dbPopularMenu';
 import Swipeable from 'react-native-swipeable';
 
 export default function OrderCard({ onTotalChange, total }) {

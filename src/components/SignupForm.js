@@ -12,8 +12,8 @@ import { StyleSheet,
   export default function SignupForm() {
     const navigation = useNavigation();
 
-    const [isChecked1, setIsChecked1] = useState(false);
-    const [isChecked2, setIsChecked2] = useState(false);
+    const [check, setcheck] = useState(false);
+    const [check1, setcheck1] = useState(false);
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -39,7 +39,7 @@ import { StyleSheet,
         });
 
         if (response.status === 201) {
-          Alert.alert('Success', 'Đăng kí thành công! Đăng nhập ngay', [
+          Alert.alert("Success", "Register successfully! let's login", [
             {
               text: 'OK',
               onPress: () => {
@@ -48,19 +48,19 @@ import { StyleSheet,
             },
           ]);
         } else {
-          Alert.alert('Error', 'Đăng ký thất bại. Vui lòng kiểm tra lại thông tin.');
+          Alert.alert('Error', 'Register Failed. Please check information.');
         }
       } catch (error) {
-        console.error('Lỗi:', error);
+        console.error('Error:', error);
       }
     };
 
     const toggleCheckbox1 = () => {
-        setIsChecked1(!isChecked1);
+        setcheck(!check);
     };
 
     const toggleCheckbox2 = () => {
-        setIsChecked2(!isChecked2);
+        setcheck1(!check1);
     };
 
     return (
@@ -93,22 +93,22 @@ import { StyleSheet,
           <View style={styles.container}>
             <View style={styles.group}>
                 <TouchableOpacity
-                    style={[styles.checkbox, isChecked1 ? styles.checked : styles.unchecked]}
+                    style={[styles.checkbox, check ? styles.checked : styles.unchecked]}
                     onPress={toggleCheckbox1}
                 >
-                    {isChecked1 && (
-                    <Text style={styles.checkmark}>&#10003;</Text> // Biểu tượng checkmark (✔)
+                    {check && (
+                    <Text style={styles.checkmark}>&#10003;</Text> 
                     )}
                 </TouchableOpacity>
                 <Text style={styles.nameCheckbox}>Keep Me Signed In</Text>
             </View>
             <View style={styles.group}>
                 <TouchableOpacity
-                    style={[styles.checkbox, isChecked2 ? styles.checked : styles.unchecked]}
+                    style={[styles.checkbox, check1 ? styles.checked : styles.unchecked]}
                     onPress={toggleCheckbox2}
                 >
-                    {isChecked2 && (
-                    <Text style={styles.checkmark}>&#10003;</Text> // Biểu tượng checkmark (✔)
+                    {check1 && (
+                    <Text style={styles.checkmark}>&#10003;</Text>
                     )}
                 </TouchableOpacity>
                 <Text style={styles.nameCheckbox}>Email Me About SpecialPricing</Text>
