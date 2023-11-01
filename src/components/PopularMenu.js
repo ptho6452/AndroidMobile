@@ -8,7 +8,7 @@ export default function PopularMenu() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://6471cfab6a9370d5a41ab469.mockapi.io/menu',{method: "GET"});
+        const response = await fetch('https://6541d708f0b8287df1fef621.mockapi.io/PopularMenu',{method: "GET"});
         const data = await response.json();
         setDataMenu(data);
       }

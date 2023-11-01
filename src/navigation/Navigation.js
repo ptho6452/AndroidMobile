@@ -5,6 +5,7 @@ import Home from '../screens/Home';
 import Profile from '../screens/Profile';
 import Message from '../screens/Message';
 import ShoppingCard from '../screens/ShoppingCard';
+import Login from '../components/Login';
 
 import Home_Active from '../assets/icons/Home_Active.png';
 import Home_Inactive from '../assets/icons/Home_Inactive.png';
@@ -19,6 +20,7 @@ const Tab = createBottomTabNavigator();
 
 export default function Navigation() {
   return (
+    
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
@@ -47,11 +49,13 @@ export default function Navigation() {
         keyboardHidesTabBar: true,
         activeBackgroundColor: '#DDD9F3',
       }}
-    >
+    >              
+
       <Tab.Screen name="Home" component={Home} options={{ headerShown: false }} />
       <Tab.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
       <Tab.Screen name="ShoppingCard" component={ShoppingCard} options={{ headerShown: false }} />
       <Tab.Screen name="Message" component={Message} options={{ headerShown: false }} />
     </Tab.Navigator>
+    
   );
 }

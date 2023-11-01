@@ -20,7 +20,7 @@ export default function NearestRestaurant() {
     useEffect(() => {
         const fetchData = async () => {
             try{
-                const respone = await fetch('https://6471cfab6a9370d5a41ab469.mockapi.io/restaurant', {method: "GET"});
+                const respone = await fetch('https://6541aa53f0b8287df1fe9f7e.mockapi.io/restaurant', {method: "GET"});
                 const data = await respone.json();
                 setData(data);
             }

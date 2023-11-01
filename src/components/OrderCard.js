@@ -30,7 +30,7 @@ export default function OrderCard({ onTotalChange, total }) {
   const calculateTotal = () => {
     let total = 0;
     for (const item of menuItems) {
-      total += (item.price * (itemQuantities[item.id] || 1));
+      total += (item.price * (itemQuantities[item.id] || 1) );
     }
     onTotalChange(total);
 

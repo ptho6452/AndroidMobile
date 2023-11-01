@@ -49,7 +49,6 @@ export default function Filter() {
           <Text style={styles.title}>{filterGroup.title}</Text>
           <View style={styles.groupBtn}>
             {filterGroup.options.map((option, optionIndex) => (
-              // <BtnFilter onPress={() => updateKey(title)} key={optionIndex} title={option} />
               <TouchableOpacity style={styles.btnFilter} onPress={() => updateKey(option)} key={optionIndex}>
                 <Text style= {styles.btnText}>{option}</Text>
             </TouchableOpacity>

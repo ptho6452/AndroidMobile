@@ -8,8 +8,9 @@ import { StyleSheet,
     TouchableOpacity,
    } from 'react-native';
    import { useNavigation } from '@react-navigation/native';
+   import { Alert } from 'react-native';
 
-  export default function SignupForm() {
+  export default function Register() {
     const navigation = useNavigation();
 
     const [check, setcheck] = useState(false);
@@ -30,7 +31,7 @@ import { StyleSheet,
       };
 
       try {
-        const response = await fetch('https://6410c403da042ca131fb737e.mockapi.io/users', {
+        const response = await fetch('https://6541aa53f0b8287df1fe9f7e.mockapi.io/restaurant/1/Users', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -48,7 +49,7 @@ import { StyleSheet,
             },
           ]);
         } else {
-          Alert.alert('Error', 'Register Failed. Please check information.');
+          alert('Error', 'Register Failed. Please check information.');
         }
       } catch (error) {
         console.error('Error:', error);
@@ -66,8 +67,8 @@ import { StyleSheet,
     return (
       <ImageBackground source={require('../assets/Profiles/background-profiles.png')} style={styles.imageBackground}>
         <View style={styles.image}>
-          <Image source={require('../assets/Profiles/DIDFOOD.png')}></Image>
-        </View>
+        <Image source={{ uri: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-logo%2C-hotel-logo-design-template-00f9be74854d2ccf01ff3005cd3041ee_screen.jpg?ts=1665425217" }} style={{ width: 200, height: 200 }} />     
+           </View>
         <View style={styles.form}>
           <Text style={styles.tittle}>Sign Up For Free</Text>
           <View style={styles.textInput}>
@@ -89,31 +90,7 @@ import { StyleSheet,
                 value={password}
                 onChangeText={text => handleOnChange(text, setPassword)}
             />
-          </View>
-          <View style={styles.container}>
-            <View style={styles.group}>
-                <TouchableOpacity
-                    style={[styles.checkbox, check ? styles.checked : styles.unchecked]}
-                    onPress={toggleCheckbox1}
-                >
-                    {check && (
-                    <Text style={styles.checkmark}>&#10003;</Text> 
-                    )}
-                </TouchableOpacity>
-                <Text style={styles.nameCheckbox}>Keep Me Signed In</Text>
-            </View>
-            <View style={styles.group}>
-                <TouchableOpacity
-                    style={[styles.checkbox, check1 ? styles.checked : styles.unchecked]}
-                    onPress={toggleCheckbox2}
-                >
-                    {check1 && (
-                    <Text style={styles.checkmark}>&#10003;</Text>
-                    )}
-                </TouchableOpacity>
-                <Text style={styles.nameCheckbox}>Email Me About SpecialPricing</Text>
-            </View>
-          </View>
+          </View>   
         </View>
         <View style={{flex: 1}}>
           <View style={styles.btn}>
